@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="gallery.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+<body>
+    <h1 style="font-weight: bolder; font-size: xx   -large;">Memories from SWARNUTSAV'23</h1>
+    <hr>
+    <div class="full-img" id="fullImgBox">
+        <img src="law.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+        <img src="images.jpeg" onclick="openFullImg(this.src)">
+        <img src="dbra.jpeg" onclick="openFullImg(this.src)">
+        <img src="dbra-modified.png" onclick="openFullImg(this.src)">
+        <img src="logo.png" onclick="openFullImg(this.src)">
+        <img src="logo.png" onclick="openFullImg(this.src)">
+        <img src="logo.png" onclick="openFullImg(this.src)">
+    </div>
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+        
+        function openFullImg(pic){
+            fullImgBox.style.display = "flex"
+            fullImg.src = pic;
+        }    
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+        
+    </script>
+    <form>
+        <button class="inline-flex text-black bg-yellow-600 border-0 py-1 px-5 focus:outline-none hover:bg-yellow-400 rounded text-lg " formaction="website.html" style="font-weight:bold; font-size: x-large; margin-top:15px; margin-left: 48%;">Back</button>
+        
+      </form>
+</body>
+</html>
